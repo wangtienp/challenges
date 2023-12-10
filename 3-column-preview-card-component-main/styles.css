@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca');
+
+:root {
+    --clr-bright-orange:hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    --clr-paragraph-color:hsla(0, 0%, 100%, 0.75);
+    --clr-light-gray: hsl(0, 0%, 95%);
+    --ff-big-shoulders-display:"Big Shoulders Display",sans-serif;
+    --ff-lexend-deca:"Lexend Deca",serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-color: var(--clr-light-gray);
+  
+}
+.container{
+    
+    height: 95dvh;
+    display: grid;
+    grid-template-columns: repeat(3,20%);
+    align-content: center;
+    justify-content: center;
+}
+#box1{
+    background-color: var(--clr-bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+#box2{
+    background-color: var(--clr-dark-cyan);
+}
+#box3{
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+.box p{
+    font-family: var(--ff-lexend-deca);
+    max-width: 10.5rem;
+    font-size: 15px;
+    color: var(--clr-paragraph-color);
+}
+
+.box header{
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--ff-big-shoulders-display);
+    color: var(--clr-light-gray);
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-between;
+    padding:30px 30px;  
+}
+
+.box button{
+    font-size: 1.25rem;
+    background-color: var(--clr-light-gray);
+    border: 0;
+    padding: 10px 10px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+#box1 button{
+    color: var(--clr-bright-orange);
+}
+#box2 button{
+    color: var(--clr-dark-cyan);
+}
+#box3 button{
+    color: var(--clr-very-dark-cyan);
+}
+#box1 button:focus{
+    color: var(--clr-light-gray);
+    border: solid 1px var(--clr-light-gray);
+    background-color: var(--clr-bright-orange);
+}
+#box2 button:focus{
+    color: var(--clr-light-gray);
+    border: solid 1px var(--clr-light-gray);
+    background-color: var(--clr-dark-cyan);
+}
+#box3 button:focus{
+    color: var(--clr-light-gray);
+    border: solid 1px var(--clr-light-gray);
+    background-color: var(--clr-very-dark-cyan);
+}
+@media (max-width:900px) {
+    .container{
+        grid-template-columns: repeat(auto-fill,30%);
+    }
+    
+}
+@media (max-width:500px) {
+    body{
+        padding: 40px 0;
+    }
+ .container{
+    height: fit-content;
+    grid-template-columns: repeat(auto-fill, 70%);
+ }
+ .box p{
+    max-width: 95%;
+ }
+ #box1{
+    border-radius: 10px 10px 0 0;
+ }
+ #box3{
+    border-radius: 0 0 10px 10px;
+ }
+    
+}
+
