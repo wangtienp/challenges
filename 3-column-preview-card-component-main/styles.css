@@ -43,6 +43,7 @@ body{
     max-width: 10.5rem;
     font-size: 15px;
     color: var(--clr-paragraph-color);
+    line-height: 1.5rem;
 }
 
 .box header{
@@ -61,37 +62,22 @@ body{
 }
 
 .box button{
+    margin-top: 2rem;
+    mix-blend-mode: screen;
     font-size: 1.25rem;
     background-color: var(--clr-light-gray);
-    border: 0;
+    border: solid 2px var(--clr-light-gray);
     padding: 10px 10px;
     border-radius: 24px;
     cursor: pointer;
+    transition: all 0.5s;
 }
-#box1 button{
-    color: var(--clr-bright-orange);
+.box button:hover{
+    background-color: transparent;
+    color: var(--clr-paragraph-color);
+    
 }
-#box2 button{
-    color: var(--clr-dark-cyan);
-}
-#box3 button{
-    color: var(--clr-very-dark-cyan);
-}
-#box1 button:focus{
-    color: var(--clr-light-gray);
-    border: solid 1px var(--clr-light-gray);
-    background-color: var(--clr-bright-orange);
-}
-#box2 button:focus{
-    color: var(--clr-light-gray);
-    border: solid 1px var(--clr-light-gray);
-    background-color: var(--clr-dark-cyan);
-}
-#box3 button:focus{
-    color: var(--clr-light-gray);
-    border: solid 1px var(--clr-light-gray);
-    background-color: var(--clr-very-dark-cyan);
-}
+
 @media (max-width:900px) {
     .container{
         grid-template-columns: repeat(auto-fill,30%);
