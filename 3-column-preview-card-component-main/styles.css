@@ -26,13 +26,11 @@ body{
     grid-template-columns: repeat(3,1fr);
     align-content: center;
     justify-content: center;
-    margin-top: 10dvh;
-    margin-bottom: 10dvh;
-    border-radius: 10px;
-    overflow: hidden;
+    height: 95dvh;
 }
 #box1{
     background-color: var(--clr-bright-orange);
+    border-radius: 10px 0 0 10px;
     
 }
 #box2{
@@ -40,7 +38,7 @@ body{
 }
 #box3{
     background-color: var(--clr-very-dark-cyan);
-   
+    border-radius: 0 10px 10px 0;
 }
 .box p{
     font-family: var(--ff-lexend-deca);
