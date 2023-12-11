@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+:root{
+    --clr-cyan:hsl(179, 62%, 43%);
+    --clr-bright-cyan:hsl(179, 62%, 63%);
+    --clr-yellow300:hsl(71, 73%, 54%);
+    --clr-gray100: hsl(204, 43%, 93%);
+    --clr-gray50:hsla(204,43%,93%,50%);
+    --clr-grayish-blue:hsl(218, 22%, 67%);
+    --ff-karla:"Karla",'sans-serif';
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100dvh;
+    font-family: var(--ff-karla);
+    background-color: var(--clr-gray100);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr auto;
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+.container{
+    height: 85dvh;
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "sect1 sect1"
+     "sect2 sect3";  
+     border-radius: 10px;
+     overflow: hidden;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 10px;
+    padding: 20px 30px;
+}
+.grid header{
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#section1{
+    grid-area: sect1;
+    background-color: white;
+}
+#section1 header{
+    color: var(--clr-cyan);
+}
+#section1 p:first-of-type{
+    color: var(--clr-yellow300);
+    font-weight: 700;
+}
+#section1 p:nth-of-type(2){
+    color: var(--clr-grayish-blue);
+}
+#section2{
+    grid-area: sect2;
+    background-color: var(--clr-cyan);
+}
+#section2 p:first-of-type{
+    color: white;
+    font-size: 1.75rem;
+
+}
+#section2 p:first-of-type span{
+    color: var(--clr-gray50);
+    font-size: 16px;
+}
+#section2 p:nth-of-type(2){
+    color: var(--clr-gray100);
+    margin-bottom: 15px;
+}
+#section2 button{
+    background-color: var(--clr-yellow300);
+    padding: 10px 0;
+    border: 0;
+    color: var(--clr-gray100);
+    border-radius: 5px;
+}
+#section3{
+    grid-area: sect3;
+    background-color: var(--clr-bright-cyan);
+}
+#section3 ul {
+    list-style: none;
+}
+#section3 ul li{
+    color: var(--clr-gray100);
+}
+
+@media (max-width:900px){
+    .container{
+        max-width: 85%;
+    }
+}
+@media (max-width:600px){
+    body{
+        height: fit-content;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .container{
+        height: fit-content;
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "sect1"
+        "sect2"
+        "sect3";
+    }
+    .grid{
+        height: 300px;
+        justify-content: center;
+    }
+}
