@@ -20,6 +20,7 @@ body{
     background-color: var(--clr-blue100);
     background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     grid-template-rows: 1fr auto; 
 }
 .container{
