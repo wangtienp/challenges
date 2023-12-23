@@ -53,14 +53,22 @@ function fieldIsNotEmpty(){
             input.classList.add('error')
             errorText[index].classList.add('error')
             errorText[index].textContent = fieldRequired
-            emptyPersonalInfo= false
+            
             
         }else{
             input.classList.remove('error')
             errorText[index].classList.remove('error')
-            emptyPersonalInfo = true
+            
         }
     })
+    for(const error of errorInput){
+        if(error.classList.contains('error')){
+            emptyPersonalInfo = false
+            break
+        }else{
+            emptyPersonalInfo = true
+        }
+    }
     return emptyPersonalInfo
 }
 
