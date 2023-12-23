@@ -1,0 +1,49 @@
+.content  #buttons{
+   display: grid;
+   align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr auto;
+    font-weight: 500;
+}
+
+#buttons #nextBtn {
+    
+    transition: .4s;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+    background-color: var(--clr-mblue);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    justify-self: end;
+}
+
+#buttons #nextBtn.confirm {
+    background-color: var(--clr-purplish-blue);
+}
+
+#buttons #nextBtn:hover {
+    opacity: 0.85;
+}
+
+#buttons #nextBtn.confirm:hover {
+    opacity: 0.7;
+}
+
+#buttons #prevBtn {
+    justify-self: self-start;
+    color: var(--clr-cgray);
+    font-weight: 500;
+    transition: .4s;
+    cursor: pointer;
+}
+
+#buttons #prevBtn:hover {
+    color: var(--clr-mblue);
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 480px) {
+
+}

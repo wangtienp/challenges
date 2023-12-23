@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/plan-styles.css">
+  <link rel="stylesheet" href="./styles/button-styles.css">
+  <link rel="stylesheet" href="./styles/personal-info.css">
+  <link rel="stylesheet" href="./styles/add-on.css">
+  <link rel="stylesheet" href="./styles/summary-and-thankyou-styles.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Sidebar start -->
+  <div class="container">
+    <div class="sidebar">
+      <img src="./assets/images/bg-sidebar-desktop.svg" alt="">
+      <div class="sidebar-step-container">
+        <div class="sidebar-step">
+          <div class="circle">
+            1
+          </div>
+          <div class="step">
+            <p>Step 1</p>
+            <p>Your info</p>
+          </div>
+        </div>
+        <div class="sidebar-step">
+          <div class="circle">
+            2
+          </div>
+          <div class="step">
+            <p>Step 2</p>
+            <p>Select plan</p>
+          </div>
+        </div>
+        <div class="sidebar-step">
+          <div class="circle">
+            3
+          </div>
+          <div class="step">
+            <p>Step 3</p>
+            <p>Add-ons</p>
+          </div>
+        </div>
+        <div class="sidebar-step">
+          <div class="circle">
+            4
+          </div>
+          <div class="step">
+            <p>Step 4</p>
+            <p>Summary</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="content">
+      <!-- Step 1 start -->
+      <form id="plan-form">
+        <div class="tab">
+          <h4>Personal info</h4>
+          <div class="desc">Please provide your name, email address, and phone number.</div>
+          <div class="tab-content">
+            <div class="info-container">
+              <p>Name <span>This field is required</span></p>
+              <input type="text" placeholder="e.g. Stephen King">
+              <p>Email Address <span>This field is required</span></p>
+              <input type="text" placeholder="e.g. stephenking@lorem.com">
+              <p>Phone Number <span>This field is required</span></p>
+              <input type="text" placeholder="  e.g. 012 345 6789">
+            </div>
+
+          </div>
+
+          <!-- Step 1 end -->
+        </div>
+
+        <div class="tab">
+          <!-- Step 2 start -->
+          <h4>Select your plan</h4>
+          <div class="desc">You have the option of monthly or yearly billing.</div>
+          <div class="tab-content">
+
+            <div class="plan-container">
+              <input type="radio" name="rGroup" value="9" id="r1" checked="checked" />
+              <label class="radio" for="r1">
+                <div class="plan">
+                  <img src="./assets/images/icon-arcade.svg" alt="">
+                  <div class="plan-desc">
+                    <p class="plan-type">Arcade</p>
+                    <p class="price-period">$<span class="plan-price">9</span> <span>/mo</span> </p>
+                  </div>
+                </div>
+              </label>
+
+              <input type="radio" name="rGroup" value="12" id="r2" />
+              <label class="radio" for="r2">
+                <div class="plan">
+                  <img src="./assets/images/icon-advanced.svg" alt="">
+                  <div class="plan-desc">
+                    <p class="plan-type">Advanced</p>
+                    <p class="price-period"> $<span class="plan-price">12</span> <span>/mo</span> </p>
+                  </div>
+                </div>
+              </label>
+              <input type="radio" name="rGroup" value="15" id="r3" />
+              <label class="radio" for="r3">
+                <div class="plan">
+                  <img src="./assets/images/icon-pro.svg" alt="">
+                  <div class="plan-desc">
+                    <p class="plan-type">Pro</p>
+                    <p class="price-period"> $<span class="plan-price">15</span> <span>/mo</span> </p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="toggle-switch">
+            <span id="month" class="selected">Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="period-checkbox">
+              <span class="slider round"></span>
+            </label>
+            <span id="year"> Yearly</span>
+          </div>
+
+          <!-- Step 2 end -->
+        </div>
+        <div class="tab">
+          <!-- Step 3 start -->
+
+          <h4>Pick add-ons</h4>
+          <div class="desc">Add-ons help enhance your gaming experience.</div>
+          <div class="tab-content">
+            <div class="addon">
+              <input type="checkbox">
+              <div class="desc">
+                <p>Online service</p>
+                <p>Access to multiplayer games</p>
+              </div>
+              <div class="addon-price">+$<span class="addon-price-number">1</span><span>/mo</span></div>
+            </div>
+            <div class="addon">
+              <input type="checkbox">
+              <div class="desc">
+                <p> Larger storage</p>
+                <p> Extra 1TB of cloud save games</p>
+              </div>
+              <div class="addon-price">+$<span class="addon-price-number">2</span><span>/mo</span></div>
+
+            </div>
+            <div class="addon">
+              <input type="checkbox">
+              <div class="desc">
+                <p>Customizable Profile </p>
+                <p> Custom theme on your profile</p>
+              </div>
+              <div class="addon-price">+$<span class="addon-price-number">2</span><span>/mo</span></div>
+            </div>
+          </div>
+          <!-- Step 3 end -->
+        </div>
+        <div class="tab">
+          <!-- Step 4 start -->
+          <h4>Finishing up</h4>
+          <div class="desc">Double-check everything looks OK before confirming.</div>
+          <div class="tab-content">
+            <div class="summary-box">
+              <div class="summary-container">
+                <div class="plan-summary"></div>
+                <div class="addon-summary"></div>
+              </div>
+              <div class="final-price"></div>
+            </div>
+          </div>
+          <!-- Dynamically add subscription and add-on selections here -->
+          <!-- Step 4 end -->
+        </div>
+
+        <div class="tab">
+          <!-- Step 5 start -->
+          <div class="tab-content">
+            <img src="./assets/images/icon-thank-you.svg">
+            <h4>Thank you!</h4>
+            <div class="desc">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </div>
+            
+          </div>
+          <!-- Step 5 end -->
+        </div>
+      </form>
+      <div id="buttons">
+        <span id="prevBtn">Go Back</span>
+        <button id="nextBtn">Next Step</button>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/wangtienp" target="_blank">wangtienp</a>.
+  </div>
+
+  <!-- scripts -->
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/plan-script.js"></script>
+  <script src="./scripts/personal-info.js"></script>
+
+  <script src="./scripts/add-on-scripts.js"></script>
+  <script src="./scripts/summarry-script.js"></script>
+</body>
+
+</html>

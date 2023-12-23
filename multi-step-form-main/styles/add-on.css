@@ -1,0 +1,40 @@
+.tab-content {
+    display: grid;
+    row-gap: 20px;
+}
+
+.addon {
+    display: grid;
+    padding: 20px 15px;
+    border: 2px solid var(--clr-lgray);
+    border-radius: 8px;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.addon.checked{
+    border-color: var(--clr-mblue);
+    background-color: var(--clr-magnolia);
+}
+.addon input[type=checkbox]:checked {
+    accent-color: var(--clr-purplish-blue);
+}
+
+.addon .desc {
+    margin-left: 20px;
+}
+
+.addon .desc p:nth-of-type(1) {
+    color: var(--clr-mblue);
+}
+
+.addon .desc p:nth-of-type(2) {
+    color: var(--clr-cgray);
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.addon .addon-price {
+    color: var(--clr-purplish-blue);
+}
