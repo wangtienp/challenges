@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-lpink: hsl(275, 100%, 97%);
+    --clr-gpurple:hsl(292, 16%, 49%);
+    --clr-dpurple:hsl(292, 42%, 14%);
+    --ff-work-sans: 'Work Sans';
+}
+body{
+    font-family: var(--ff-work-sans);
+    font-size: 16px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: var(--clr-lpink);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container{
+    max-width: 50%;
+    margin: 5dvh auto;
+    background-color: var(--clr-white);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+.container h4, .faq-question{
+    color: var(--clr-dpurple);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: 700;
+}
+.container h4{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.container .faq-question{
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+.container .faq-question:hover{
+    color: #9B30FF;
+}
+.container .faq-answer p{
+    color: var(--clr-gpurple);
+    max-height: 0;
+    overflow: hidden;
+    
+}
+.container .faq-answer p.selected{
+    max-height: 100%;
+    transition: 0.4s;
+}
+
+.container .faq-answer::after{
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid var(--clr-lpink);
+}
+.container .faq-answer:last-of-type::after{
+    content: '';
+    border: 0;
+    width: 0;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px){
+    .container{
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 480px){
+    body{
+        font-size: 0.95rem;
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container{
+        max-width: 90%;
+    }
+    
+}
