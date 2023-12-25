@@ -1,4 +1,4 @@
-let answers = document.querySelectorAll('.container .faq-answer p')
+let answers = document.querySelectorAll('.container .faq-answer')
 let questions = document.querySelectorAll('.container .faq-question')
 let image = document.querySelectorAll('.container .faq-question .image')
 const plus = './assets/images/icon-plus.svg'

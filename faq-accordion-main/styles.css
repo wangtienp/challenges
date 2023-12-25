@@ -49,15 +49,15 @@ body{
 .container .faq-question:hover{
     color: #9B30FF;
 }
-.container .faq-answer p{
+.container .faq-answer{
     color: var(--clr-gpurple);
     max-height: 0;
     overflow: hidden;
+    transition: .15s;
     
 }
-.container .faq-answer p.selected{
+.container .faq-answer.selected{
     max-height: 100%;
-    transition: 0.4s;
 }
 
 .container .faq-answer::after{
