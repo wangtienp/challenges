@@ -58,6 +58,7 @@ body{
 }
 .container .faq-answer.selected{
     max-height: 100%;
+    transition: 0.5s;
 }
 
 .container .faq-answer::after{
