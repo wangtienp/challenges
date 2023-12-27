@@ -1,9 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
 :root{
     --clr-tomato:hsl(4, 100%, 67%);
+    --clr-ltomato:hsl(4, 100%, 95%);
     --clr-dsgrey:hsl(234, 29%, 20%);
     --clr-cgrey:hsl(235, 18%, 26%);
     --clr-grey:hsl(231, 7%, 60%);
     --clr-white:hsl(0, 0%, 100%);
-    --ff-roboto:var(--clr-cgrey):'Roboto';
+    --ff-roboto:'Roboto';
+}
+body{
+    background-color: var(--clr-dsgrey);
+    font-family: var(--ff-roboto);
+    font-size: 16px;
+}
+.container{
+    margin: 5dvh auto;
+    max-width: fit-content;
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+.tab{
+    display: none;
+    margin: 0 auto;
+    max-width: 85%;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.tab h4{
+    font-size: 3rem;
+    color: var(--clr-cgrey);
+    letter-spacing: 3%;
+}
+
+.tab ul li{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+}
+.tab ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.tab .label-and-error{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: -20px;
+}
+.label-and-error label{
+    font-weight: 700;
+    color: var(--clr-dsgrey);
+}
+.label-and-error #error{
+    color: var(--clr-tomato);
+}
+.tab input{
+    padding: 15px 10px;
+    border-radius: 8px;
+    outline: 0;
+    border: 1px solid var(--clr-grey);
+}
+.tab input.error{
+    border-color: var(--clr-tomato);
+    background-color: var(--clr-ltomato);
+    color: var(--clr-tomato);
+}
+.tab #user-email{
+    color: var(--clr-dsgrey);
+    font-weight: 700;
+}
+.tab #success{
+    width: fit-content;
+}
+.tab button{
+    padding: 15px 10px;
+    margin-top: -10px;
+    background-color: var(--clr-dsgrey);
+    color: var(--clr-white);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+}
+.tab button:hover{
+    background: linear-gradient(90deg, rgba(255,86,113,255) 0%, var(--clr-tomato) 100%);
+    box-shadow: 0px 6px 14px 6px rgba(255,200,196,0.8)
+}
+
+@media only screen and (min-width: 375px) and (max-width: 480px){
+    .container{
+        margin: 0;
+        flex-direction: column-reverse;
+        padding: 0;
+        border-radius: 0;
+        justify-content: start;
+        align-items: normal;
+        row-gap: 20px;
+        width: 100%;
+    }
+    .sidebar img{
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
+    }
+    #signup-form{
+        padding: 20px 0;
+    }
 }
