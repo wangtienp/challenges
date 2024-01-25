@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+#todo-form{
+    display: flex;
+    justify-content: center;
+}
+input#todo{
+    width: 300px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+}
+.outputs{
+    display: block;
+    margin-top: 30px;
+    
+}
+.outputs >.output{
+    display: flex;
+    column-gap: 10px;
+    
+}
+.outputs >.output >.todo-value{
+    background-color: aliceblue;
+    width: 300px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.outputs >.output >.close{
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+.outputs >.output >.close:hover{
+    background-color: #d00;
+    color: #fff;
+}
+.outputs >.output >.complete{
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+.outputs >.output >.complete:hover{
+    background-color: #0d0;
+    color: #fff;
+}
+.output>.todo-value{
+    transition: all 0.8s ease;
+}
+.output>.todo-value.completed{
+    text-decoration: line-through 2px grey;
+    color: #aaa;
+}
