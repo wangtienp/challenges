@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(66, 66, 225);
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h4{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#input{
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+}
+.choices{
+    text-align: start;
+    margin-top: 20px;
+}
+.choices .choice{
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: orange;
+    color: #fff;
+}
+.choices .choice.choosen{
+    background-color: rgb(10, 10, 85);
+}
