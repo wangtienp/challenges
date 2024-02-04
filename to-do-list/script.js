@@ -12,8 +12,8 @@ function addToDo(e) {
     e.preventDefault();
     outputs.innerHTML += `<div class='output'>
     <span class ='todo-value'>${value}</span>
-    <span class ='close'>X</span>
-    <span class ='complete'>&#10003;</span> 
+    <span class ='close'>✖</span>
+    <span class ='complete'>✔</span> 
     </div>`;
 
 
