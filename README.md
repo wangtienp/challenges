@@ -16,7 +16,7 @@ Link : https://wangtienp.github.io/challenges/order-summary-component-main/
 
 Link : https://wangtienp.github.io/challenges/select-ui/
 
-Link : https://wangtienp.github.io/challenges/simple fetch/
+Link : https://wangtienp.github.io/challenges/simple-fetch/
 
 Link: https://wangtienp.github.io/challenges/single-price-grid-component-master/
 
