@@ -18,7 +18,6 @@ function pickRandomChoice(e) {
     if (e.inputType === 'insertLineBreak') {
         e.target.value = ''
         const getChoices = document.querySelectorAll('.choice')
-        //animation for each random choice
         chooseActive(getChoices)
     }
 }
