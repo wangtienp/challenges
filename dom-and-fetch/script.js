@@ -62,15 +62,6 @@ function getRange(){
     }
 
 }
-function updateRange(start){
-    
-    const pages = document.querySelectorAll('.page-list li')
-    pages.forEach((page,index)=>{
-        page.innerHTML = `${start+index}`
-    })
-    removeActive(pages)
-    initActive(pages)
-}
 function initActive(pages){
     let pageArray = Array.from(pages)
     const pageInit = pageArray.find(pA=>pA.innerHTML == currentPage)
@@ -89,29 +80,38 @@ function removeActive(pages){
 
 function displayHomepage(container,page) {
     container.innerHTML=''
-
+    
     let startIndex = (page-1)*productPerPage
     let endIndex = page*productPerPage
     const productToShow = productData.slice(startIndex,endIndex)
     productToShow.forEach((item,index) => {
         const productElement = document.createElement('div')
         productElement.className='product-item'
-            productElement.innerHTML=`
+        productElement.innerHTML=`
         <div class="product-poster">
-            <div class="product-card">
-                <a href="./about.html?id=${index+(currentPage-1)*productPerPage}"><p class="name">${item.title}</p></a>
-                <div class="description">${item.description}</div>
-            </div>
-            <img class="avatar" src="${item.thumbnail}" alt="">
-            <a href="./about.html?id=${index+(currentPage-1)*productPerPage}"></a>
+        <div class="product-card">
+        <a href="./about.html?id=${index+(currentPage-1)*productPerPage}"><p class="name">${item.title}</p></a>
+        <div class="description">${item.description}</div>
+        </div>
+        <img class="avatar" src="${item.thumbnail}" alt="">
+        <a href="./about.html?id=${index+(currentPage-1)*productPerPage}"></a>
         </div>
         <div class="product-name">
-            <a href="./about.html?id=${index+(currentPage-1)*productPerPage}" ><p class="name">${item.title}</p></a>
+        <a href="./about.html?id=${index+(currentPage-1)*productPerPage}" ><p class="name">${item.title}</p></a>
         </div>`
         container.appendChild(productElement)
     })
     let start = getRange().startPage
     updateRange(start)
+}
+function updateRange(start){
+    
+    const pages = document.querySelectorAll('.page-list li')
+    pages.forEach((page,index)=>{
+        page.innerHTML = `${start+index}`
+    })
+    removeActive(pages)
+    initActive(pages)
 }
 
 function getHashPage() {

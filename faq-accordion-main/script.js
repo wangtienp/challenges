@@ -7,26 +7,19 @@ const minus = './assets/images/icon-minus.svg'
 questions.forEach((question, index) => {
 
     question.addEventListener('click', () => {
+        toReset(answers,index)
         answers[index].classList.toggle('selected')
         //to close and open current answer
-        if (answers[index].classList.contains('selected')) {
-            image[index].src = minus //if got selected then the image is plus
-
-        }
-        else {
-            image[index].src = plus
-        }
-        //to close other answers that are open
-        answers.forEach((answer, jIndex) => {
-            if (index !== jIndex) {
-                if (answer.classList.contains('selected')) {
-                    answer.classList.remove('selected')
-                    image[jIndex].src = plus
-
-                }
-            }
-
-        })
+        image[index].src = answers[index].classList.contains('selected')?minus:plus
 
     })
 })
+
+function toReset(list,i){
+    list.forEach((answer,index)=>{
+        if(index !== i){
+            answer.classList.remove('selected')
+            image[index].src = plus
+        }
+    })
+}
