@@ -18,6 +18,8 @@ Link : https://wangtienp.github.io/challenges/select-ui/
 
 Link : https://wangtienp.github.io/challenges/simple-fetch/
 
+Link : https://wangtienp.github.io/challenges/dom-and-fetch/
+
 Link: https://wangtienp.github.io/challenges/single-price-grid-component-master/
 
 Link: https://wangtienp.github.io/challenges/to-do-list/
