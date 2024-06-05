@@ -209,7 +209,7 @@ function handleControllerShow() {
 function resetTimer() {
     if (idleTimeout) clearTimeout(idleTimeout)
     if (!cursorVisible) handleControllerShow()
-    idleTimeout = setTimeout(handleControllerCollapse, 2000)
+    idleTimeout = setTimeout(handleControllerCollapse, 5000)
 }
 video.addEventListener('mousemove', resetTimer)
 resetTimer()

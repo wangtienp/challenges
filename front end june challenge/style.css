@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    padding: 10px 15px;
+    background-color: #D9DDE2;
+    font-family: 'Roboto', sans-serif;
+}
+
+ header{
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/champagne-beach-espiritu-santo-island-vanuatu-royalty-free-image-1655672510.jpg");
+    height: 250px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+ }
+ header::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+ }
+  header>h1{
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/champagne-beach-espiritu-santo-island-vanuatu-royalty-free-image-1655672510.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    height: 250px;
+    line-height: 180px;
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-size: 4rem;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px snow;
+  }
+
+section:first-of-type{
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 0px 10px 4px rgba(0,0,0,0.39);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: linear-gradient(180deg, rgba(86,145,149,1) 0%, rgba(141,151,163,1) 16%, rgba(215,165,142,1) 36%, rgba(255,141,115,1) 62%);
+}
+section:first-of-type h2{
+    -webkit-text-stroke: 1px #AEEEED;
+    color: transparent;
+    background-clip: text;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+section:first-of-type p{
+    font-size: 20px;
+    color: #DCDCDC;
+    text-align: justify;
+    
+}
+section:last-of-type{
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+section:last-of-type h2{
+    font-size: 2rem;
+    text-align: center;
+}
+ul{
+    
+    width: fit-content;
+    flex-wrap: nowrap;
+    list-style: none;
+    display: flex;
+    animation: slide 40s linear infinite;
+    padding-block:1rem;
+    gap: 1rem;
+
+}
+ul:hover{
+    animation-play-state: paused;
+}
+
+li{
+    position: relative;
+    min-width: 300px;
+    margin: 0 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 350px;
+    box-shadow: 1px 0px 10px 4px rgba(0,0,0,0.39);
+   
+}
+
+li h3{
+    opacity: 0.5;
+    padding: 0 10px;
+    word-wrap: break-word;
+    text-align: center;
+    min-height: 50%;
+    font-size: 1.3rem;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    color: transparent;
+    position: relative;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+}
+li h3::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0% 80%, rgba(0,0,0,0.5) 100%);
+    opacity: 0;
+    transition: 0.8s;
+}
+.explore{
+    width: 100px;
+    background-color: #DC3856;
+    height: 50px;
+    position: absolute;
+    top: 125px;
+    transform: translateX(-50%);
+    left: 50%;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    transition: 0.7s;
+    cursor: pointer;
+    opacity: 0;
+}
+li:hover .explore{
+    top: 120px;
+    opacity: 1;
+}
+li:hover h3{
+    opacity: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    transform: scale(1.1);
+    color: white;
+    -webkit-text-stroke: 1px black
+}
+li:hover h3::after{
+    opacity: 1;
+}
+li p{
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.5;
+    height: 50%;
+    background-color: aliceblue;
+}
+ul::-webkit-scrollbar{
+    display: none;
+}
+@keyframes slide{
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
